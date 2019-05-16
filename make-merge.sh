@@ -18,4 +18,4 @@ git commit -m "merge pot files."
 
 git push --set-upstream origin make-merge-$CPYTHON_LATEST_SHA
 
-pyhub_pr --organisation python --repo python-docs-fr --token $GITHUB_TOKEN --title "Merge from upstream doc" --body "This PR was created from the command line with pyhub-pr." --head $TOKEN_OWNER_USERNAME:make-merge-$(git rev-parse --short HEAD)
+python3 -m pyhub_pr --organisation python --repo python-docs-fr --token $GITHUB_TOKEN --title "Merge from upstream doc" --body "This PR was created from the command line with pyhub-pr." --head $TOKEN_OWNER_USERNAME:make-merge-$(git rev-parse --short HEAD)
